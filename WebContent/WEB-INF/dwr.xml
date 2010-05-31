@@ -1,0 +1,68 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+<allow>
+ 
+  	<create creator="new" javascript="JDate">
+      <param name="class" value="java.util.Date"/>
+    </create>
+ 
+ 	<create creator="new" javascript="jValidator">
+ 		<param name="class" value="com.beyond.dwr.action.FormValidator"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jCustomers">
+ 		<param name="class" value="com.beyond.dwr.action.CustomerAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jLists">
+ 		<param name="class" value="com.beyond.dwr.action.ListAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jTemplates">
+ 		<param name="class" value="com.beyond.dwr.action.TemplateAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jMails">
+ 		<param name="class" value="com.beyond.dwr.action.MailAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jUsers">
+ 		<param name="class" value="com.beyond.dwr.action.UserAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jExcelReader">
+ 		<param name="class" value="com.beyond.util.ExcelReader"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jCacheManager">
+ 		<param name="class" value="com.beyond.dwr.action.CacheAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jAutoResponder">
+ 		<param name="class" value="com.beyond.dwr.action.AutoResponseAction"/>
+ 	</create>
+ 	
+ 	<create creator="new" javascript="jReports">
+ 		<param name="class" value="com.beyond.dwr.action.ReportsAction"/>
+ 	</create>
+ 	
+ 	<convert converter="bean" javascript="autoRespVO" match="com.beyond.autoresponse.vo.AutoResponseVO"/>
+ 	<convert converter="bean" javascript="mailVO" match="com.beyond.mail.vo.MailVO"/>
+ 	<convert converter="bean" javascript="customerGroupVO" match="com.beyond.list.vo.ListVO"/>
+ 	<convert converter="bean" javascript="baseVO" match="com.beyond.base.vo.BaseVO" />
+ 	<convert converter="bean" javascript="customerVO" match="com.beyond.customer.vo.CustomerVO" />
+ 	<convert converter="bean" javascript="templateVO" match="com.beyond.template.vo.TemplateVO" />
+ 	<convert converter="bean" javascript="userVO" match="com.beyond.user.vo.UserVO" />
+ 	<convert converter="bean" javascript="mailProfileVO" match="com.beyond.user.vo.EmailProfileVO" />
+ 	<convert converter="bean" javascript="acionForm" match="org.apache.struts.action.ActionForm" />
+ 	<convert converter="bean" javascript="acionWrapper" match="org.apache.struts.action.ActionServletWrapper" />
+ 	<convert converter="bean" javascript="beyondError" match="com.beyond.util.BeyondError" />
+ 	<convert converter="bean" javascript="geoTrackerVO" match="com.beyond.reports.vo.GEOTrackVO" />
+ 	<convert converter="bean" javascript="performanceVO" match="com.beyond.reports.vo.OverallPerformanceVO" />
+	<convert converter="bean" javascript="subscriberStatsVO" match="com.beyond.reports.vo.SubscriberStatsVO" />
+	<convert converter="bean" javascript="campaignVO" match="com.beyond.reports.vo.MailCampaignVO" />
+	
+</allow>
+</dwr>

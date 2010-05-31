@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config> 
+  
+<form-beans>  
+	  <form-bean name="user" type="com.beyond.user.vo.UserVO" />
+	  <form-bean name="login" type="com.beyond.user.vo.LoginVO" />
+	  <form-bean name="customer" type="com.beyond.customer.vo.CustomerVO" />
+	  <form-bean name="listVO" type="com.beyond.list.vo.ListVO" />
+	  <form-bean name="customerFile" type="com.beyond.customer.vo.CustomerFileUploadVO" />
+	  <form-bean name="template" type="com.beyond.template.vo.TemplateVO" />
+	  <form-bean name="mailer" type="com.beyond.mail.vo.MailVO" />
+	  <form-bean name="autoResponse" type="com.beyond.autoresponse.vo.AutoResponseVO"/>
+</form-beans>
+     
+<global-forwards>
+  		<forward name="applicationHome" path="/index.jsp"/>
+  		<forward name="userHome" path="/WEB-INF/jsp/user/home.jsp"/>
+</global-forwards>
+
+<action-mappings>
+   	
+   		<action  
+			path="/userAuthentication" 
+			type="com.beyond.user.controller.UserController" 
+			parameter="mx"
+			scope="request"    
+			name="login"
+			validate="false">
+		</action>
+		  
+		<action  
+			path="/userController" 
+			type="com.beyond.user.controller.UserController" 
+			parameter="mx"
+			scope="request"    
+			name="user"
+			validate="false">
+		</action>  
+		
+		<action  
+			path="/settings" 
+			type="com.beyond.user.settings.controller.AppSettingsController" 
+			parameter="mx"
+			scope="request"    
+			name="user"
+			validate="false">
+			<forward name="home" 			path="/WEB-INF/jsp/user/settings/home.jsp"/> 
+			<forward name="accountHome" 	path="/WEB-INF/jsp/user/settings/accountSettings.jsp"/> 
+			<forward name="emailHome" 		path="/WEB-INF/jsp/user/settings/emailSettings.jsp"/> 
+			<forward name="settingsHome" 	path="/WEB-INF/jsp/user/settings/generalSettings.jsp"/>  
+		</action>  
+		
+		<action  
+			path="/users" 
+			type="com.beyond.user.controller.UserController" 
+			parameter="mx"
+			scope="request"    
+			name="user"
+			validate="false">
+			<forward name="accountsHome" 	path="/WEB-INF/jsp/user/accounts/home.jsp"/>
+			<forward name="new" 			path="/WEB-INF/jsp/user/accounts/new.jsp"/>
+			<forward name="list" 			path="/WEB-INF/jsp/user/accounts/list.jsp"/>
+		</action>
+		
+		<action  
+			path="/customerController" 
+			type="com.beyond.customer.controller.CustomerController" 
+			parameter="mx"
+			scope="request"
+			name="customer"    
+			validate="false">
+			<forward name="customers" 		path="/WEB-INF/jsp/customer/home.jsp"/>
+			<forward name="newCustomer" 	path="/WEB-INF/jsp/customer/new.jsp"/>
+			<forward name="bulkUpload" 	    path="/WEB-INF/jsp/customer/fileUpload.jsp"/>
+			<forward name="showCustomers" 	path="/WEB-INF/jsp/customer/list.jsp"/>	
+			<forward name="view" 			path="/WEB-INF/jsp/customer/list/view.jsp"/>					
+		</action>   
+		
+		<action  
+			path="/lists" 
+			type="com.beyond.list.controller.ListController" 
+			parameter="mx"
+			scope="request"
+			name="listVO"    
+			validate="false">
+			<forward name="home" 		path="/WEB-INF/jsp/list/home.jsp"/> 
+			<forward name="view" 		path="/WEB-INF/jsp/list/view.jsp"/> 
+			<forward name="new" 		path="/WEB-INF/jsp/list/new.jsp"/>
+		</action>   
+		
+		<action  
+			path="/subscriptions" 
+			type="com.beyond.customer.controller.SubscriptionController" 
+			parameter="mx"
+			scope="request"
+			name="customer"    
+			validate="false">
+			<forward name="new" 		path="/WEB-INF/jsp/customer/subscription/new.jsp"/> 
+			<forward name="view" 		path="/WEB-INF/jsp/customer/subscription/list.jsp"/> 
+		</action>   
+		
+		<action  
+			path="/customerFileUpload" 
+			type="com.beyond.customer.controller.FileUploader" 
+			scope="request"
+			name="customerFile"    
+			validate="false">
+			<forward name="customers" 		path="/WEB-INF/jsp/customer/home.jsp"/>
+			<forward name="newCustomer" 	path="/WEB-INF/jsp/customer/new.jsp"/>
+			<forward name="bulkUpload" 	    path="/WEB-INF/jsp/customer/fileUpload.jsp"/>
+			<forward name="showCustomers" 	path="/WEB-INF/jsp/customer/list.jsp"/>			
+		</action> 
+		
+		 <action  
+			path="/templates" 
+			type="com.beyond.template.controller.TemplateController" 
+			parameter="mx"
+			scope="request"
+			name="template"
+			validate="false">
+			
+			<forward name="home"    path="/WEB-INF/jsp/template/home.jsp"/>
+			<forward name="new" 	path="/WEB-INF/jsp/template/new.jsp"/>
+			<forward name="result" 	path="/WEB-INF/jsp/template/result.jsp"/>
+			<forward name="view" 	path="/WEB-INF/jsp/template/list.jsp"/>
+			<forward name="prepare" path="/WEB-INF/jsp/template/elements.jsp"/>
+			<forward name="staticTemplate" 	path="/WEB-INF/jsp/template/staticTemplate.jsp"/>
+			<forward name="dynamicTemplate" path="/WEB-INF/jsp/template/dynamicTemplate.jsp"/>
+								
+		</action>   
+		 
+		 <action  
+			path="/mailer" 
+			type="com.beyond.mail.controller.MailController" 
+			parameter="mx"
+			scope="request"
+			name="mailer"    
+			validate="false">
+			
+			<forward name="home"    path="/WEB-INF/jsp/mail/home.jsp"/>
+			<forward name="new" 	path="/WEB-INF/jsp/mail/compose.jsp"/>
+			<forward name="result" 	path="/WEB-INF/jsp/mail/result.jsp"/>
+			<forward name="sent" 	path="/WEB-INF/jsp/mail/sent.jsp"/>		
+			<forward name="view" 	path="/WEB-INF/jsp/mail/responses.jsp"/> 
+			<forward name="schedule" path="/WEB-INF/jsp/mail/scheduler.jsp"/>						
+		</action>   
+		 
+		 <action  
+			path="/autoResponders" 
+			type="com.beyond.autoresponse.controller.AutoResponseController" 
+			parameter="mx"
+			scope="request"
+			name="autoResponse"    
+			validate="false">
+			
+			<forward name="home"    path="/WEB-INF/jsp/autoresponse/home.jsp"/>
+		 	<forward name="view" 	path="/WEB-INF/jsp/autoresponse/view.jsp"/> 
+		</action>   
+</action-mappings> 
+   
+<controller> 
+		<set-property  property="processorClass" value="com.beyond.user.controller.SessionValidator" />
+</controller>
+
+</struts-config> 
