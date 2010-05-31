@@ -1,0 +1,575 @@
+table{
+	font-family:Tahoma;
+	font-size:8pt;
+}
+.beyond-header{
+	position:relative;
+	height:100px;
+ 	background:white;
+	color:black;
+	}
+#jMessageBox{
+	width:300px;
+	height:175px;
+	background:white;
+	z-index:10001;
+	display:block;
+	}
+
+#jMessageHeader{
+	 height:30px;
+	 background:white url(../../images/headRow.png) repeat-x 0;
+	}
+
+#jMessageBody{
+	padding:4px;
+	height:100%;
+	background:white;
+	border:1px solid rgb(240,240,240);
+	} 
+#jMessageBar{
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	display:none;
+	align:center;
+	height:25px;
+	width:550px;
+	}	
+	
+.jTable{
+	border-bottom-color: #CCC;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	border-left-color: #CCC;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #CCC;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #CCC;
+	border-top-style: solid;
+	border-top-width: 1px;
+	display: block;
+	font-family:Tahoma;;
+	font-size: 8pt;
+	height: 120px;
+	}
+
+.jOddRow{
+	background-color: white;
+	border-bottom-color: #E3E3E3;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: table-cell;
+	font-family:Tahoma;
+	font-size: 8pt;
+	height: 16px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 6px;
+	vertical-align: middle;
+	white-space: nowrap;
+	}
+.locked{
+	background-color:rgb(248,248,248);
+	font-weight: bold;
+	height:20px;
+	cursor:help;
+	}	
+option.head {
+	background-color: rgb(214,234,246);
+	font-size:13px;
+	font-weight: bold;	
+	}		
+option.row {
+	cursor:pointer;
+	}	
+.jFieldSet{
+	border: 1px solid #CCC;
+    margin: 0px 10px 10px;
+	}
+.jLegend{
+	color: rgb(43,154,191);
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 15px;
+	padding-left: 2px;
+	padding-right: 2px;
+	}
+.jLogo{
+	position:relative;
+	background: url(../../images/banners/OpenLogin1.png) left top no-repeat;
+	height:75px;
+	width:315px;
+	left:2%;
+	margin:auto 0px;
+	} 
+.jLoginBG{
+	position:relative;
+	background: url(../../images/widgets/loginDisplay.png) left top no-repeat;
+	height:75px;
+	width:315px;
+	left:65%; 
+	}
+.jCompanyInfo{
+	font-family: Tahoma;
+	font-size: 8pt;
+	position:relative;
+	left:2%;
+ 	top:20%; 
+	}
+.jUserInfo{
+	font-family: Tahoma;
+	font-size: 8pt;
+	position:relative;
+	height:75px;
+	width:315px;
+	top:5px;
+	margin:3px;
+	}
+.jUser{
+	font-family: Tahoma;
+	font-size: 8pt;
+	position:relative;
+	left:2%;
+	}
+.jl{
+	
+	position:relative;
+	width:230px;
+	left:1%;
+	}
+.jr{
+	position:relative;
+	width:75px;
+	right:1%;
+	}
+.alert{
+	font-family: Tahoma;
+	font-size: 8pt;
+	text-align: center;
+	position:relative;
+	height:22px;
+	background-color:rgb(255, 241, 168);
+	color:black;
+ 	font-weight:bold;
+	}
+	
+#div_beyond_message{
+	text-align: center;
+	position:relative;
+	margin:0px auto;
+	min-width: 333px;
+	max-width: 450px;
+	display:none;
+	height:22px;
+	background-color:rgb(255, 241, 168);
+	color:black;
+ 	font-weight:bold;
+	}
+#div_remote_error{
+	text-align: center;
+	position:relative;
+	min-width: 333px;
+	max-width: 450px;
+ 	height:22px; 
+ 	display:none;
+ 	margin:0px auto;
+ 	background-color:rgb(180,20,20);
+ 	color:white;
+ 	font-weight:bold;
+   }
+#idWait{
+	 padding:3px;
+	 color:white;
+	 margin-left:2%;
+	 background-color:green;
+	 border: 1px solid green; 
+	 min-height:30px;
+	 padding:4px 4px 4px 4px; 
+	 -moz-border-radius: 5px; 
+	 -webkit-border-radius: 5px; 
+	}
+#idAlert{ 
+	 color:black; 
+	 margin-top:10px;
+	 background-color:rgb(255,225,225);	 
+	 border: 1px solid rgb(255,225,225); 
+	 min-height:30px;
+	 padding:4px 4px 4px 4px; 
+	 -moz-border-radius: 5px; 
+	 -webkit-border-radius: 5px; 
+	
+	}
+#l{
+	cursor:pointer;
+	}
+.l{
+	cursor:pointer;
+	}
+#sendNow{
+	cursor:pointer;
+	}
+#sendLater{
+	cursor:pointer;
+	} 
+#tblRow{
+	cursor:pointer;
+	height:24px;
+	}
+tr#tblRow td{
+	border-bottom:1px solid rgb(240,240,240);
+	} 
+#tblRow:hover{
+	cursor:pointer;
+	background-color:rgb(214,234,246);
+	}
+#tblRow-Nc:hover{
+	background-color:rgb(214,234,246);
+	}
+#tblRow-Nc{
+	height:25px;
+	}	
+		
+#tblRow-Nc span{
+	padding:4px;
+	display:inline-block; 
+	vertical-align:middle;
+	}	
+#tblRow span{
+	padding:4px;
+	display:inline-block; 
+	vertical-align:middle;
+	}
+ 
+.tblRow{
+	cursor:pointer;
+	height:20px;
+	}
+.tblRow td{
+	border-bottom:1px solid rgb(240,240,240);
+	} 
+.tblRow:hover{
+	cursor:pointer;
+	background-color:rgb(214,234,246);
+	}
+.tblRow-Nc:hover{
+	background-color:rgb(214,234,246);
+	}
+.tblRow-Nc{
+	height:25px;
+	}		
+.tblRow-Nc span{
+	padding:4px;
+	display:inline-block; 
+	vertical-align:middle;
+	}	
+.tblRow-Nc	td{
+	border-bottom:1px solid rgb(240,240,240);
+	} 
+.tblRow-Nc	th{
+	border-bottom:1px solid rgb(240,240,240);
+	} 	
+.tblRow span{
+	padding:1px;
+	display:inline-block; 
+	vertical-align:middle;
+	} 
+	
+#tdGrp{
+	width:100px;
+	}
+#htabs {
+	border: 1px solid #d9d9d9;
+	}
+
+#htabs .tabs {
+	float: left;
+	width: 173px;
+	height:45px;
+	padding:0px;		
+	}
+#htabs .tabs li {
+	color: #333;
+	width: 153px;
+	height:45px;
+	background: url(../../images/widgets/hvr-normal.gif) left top no-repeat;
+	line-height: 40px;		
+	cursor: pointer;
+	text-align: left;
+	padding-left: 20px;
+	}
+ 
+#htabs .tabs li.active {
+	background: url(../../images/widgets/hvr-over.gif) left top no-repeat;
+	width: 140px;
+	height:45px;
+	padding-left: 33px;
+	font-weight: bold; 
+	}
+#htabs .tabs li:hover {
+	background: url(../../images/widgets/hvr-over.gif) left top no-repeat;
+	width: 140px;
+	height:45px;
+	padding-left: 33px;
+	font-weight: bold; 
+	}
+#tblHR{
+	height:30px;
+	padding:2px;
+	background:white url(../../images/headRow.png) repeat-x;
+	font-family:Tahoma; 
+	font-weight:bold;
+	}
+.tblHR{
+	height:30px;
+	padding:2px;
+	background:white url(../../images/headRow.png) repeat-x;
+	font-family:Tahoma; 
+	font-weight:bold;
+	}	
+#tr1{
+	height:25px;
+	background-color:rgb(244,250,253);
+	}
+#tr2{
+	background-color:rgb(244,250,253);
+	}	
+#tbl100PCT{
+	border:1px solid rgb(240,240,240); 
+	width:100%;
+	padding:4px;
+	}
+#tblPlain{
+	border:0px; 
+	width:100%;
+	}
+#tblPlain span{
+	padding:4px;
+	display:inline-block; 
+	vertical-align:middle;
+}		
+#tbl100PCT span{
+	padding:4px;
+	display:inline-block; 
+	vertical-align:middle;
+}
+.bld{
+	font-weight: bold; 
+} 
+#smallLink{
+	text-decoration:underline;
+	color:green;
+	font-size:smaller;	
+}
+#smallLink-Red{
+	text-decoration:underline;
+	color:red;
+	font-size:smaller;
+}
+#smallLink-Gray{
+	text-decoration:underline;
+	color:gray;
+	font-size:smaller;
+}
+#logout{
+	margin-right:20px;
+	text-decoration:underline;
+	font-weight: bold;
+	color:orange;
+}
+#highlight{
+	margin-right:20px;
+	text-decoration:underline;
+	font-weight: bold;
+	color:green;
+} 
+#company{
+	width:100%;
+	color:white;
+	padding:2px;
+	background-image: url('../../images/nav.png');
+	font-weight: bold;
+} 
+label{
+	cursor:pointer;
+}
+#wrapper {width:300px; margin:50px auto}
+#msg {
+	display:none; 
+	position:absolute; 
+	z-index:200; 
+	background:url(../../images/msg_arrow.png) left center no-repeat; 
+	padding-left:7px
+	}
+.jEdit{
+	background-image:url(../../images/icons/magnifier.png);
+	background-repeat:no-repeat; 
+	height:16px;
+	width:16px;
+}
+.jDelete{
+	background-image:url(../../images/icons/16x16/delete.png);
+	background-repeat:no-repeat;
+	height:16px;
+	width:16px; 
+}
+.jExcel{
+	background-image:url(../../images/icons/32x32/page_white_put.png);
+	background-repeat:no-repeat;
+	background-position:right center; 
+	height:32px; 
+	width:240px;
+}
+.jChartTab{
+	background-image:url(../../images/banners/chatTabSmall.png);
+	background-repeat:no-repeat;
+	background-position:right center; 
+	height:280px; 
+	width:480px;
+}
+.jChartTabBig{
+	background-image:url(../../images/banners/chatTabBig.png);
+	background-repeat:no-repeat;
+	background-position:right center; 
+	height:565px; 
+	width:760px;
+}
+.jChartTitle{
+	position:relative;
+	left:10px;
+	top:6px;
+	font-size:8pt;
+	font-family:Tahoma;
+	font-weight:bold;
+	max-width:200px;
+	}
+.jChartBody{ 
+	padding-top:13px; 
+	padding-left:10px; 
+	}	
+.jOpenRate{	
+	background-color:rgb(51,102,153);
+	height:24px;  
+	padding:5px 5px 5px 7px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px; 
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	width:175px;
+	}
+.jClickRate{	
+	background-color:rgb(92,182,212);
+	height:24px;   
+	padding:5px 5px 5px 7px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px; 
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	width:175px;
+	}
+.jUnSubsRate{	
+	background-color:rgb(255,153,0);
+	height:24px;   
+	padding:5px 5px 5px 7px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px; 
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	width:175px;
+	}	
+.jTip{
+	background-image:url(../../images/icons/light.png);
+	background-repeat:no-repeat;
+	background-position:left center;  
+	background-color:rgb(254,251,186);
+	min-height:22px;  
+	padding:5px 5px 5px 24px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px; 
+	border: 3px solid rgb(254,251,176);
+}
+.jRefresh{
+	background-image:url(../../images/icons/arrow_refresh.png);
+	background-repeat:no-repeat;
+	background-position:left center;  
+	min-height:22px;  
+	min-width:22px; 
+	}
+.jLoadingSmall{
+	background-image:url(../../images/icons/loaderSmall.gif);
+	background-repeat:no-repeat;
+	background-position:left center;  
+	min-height:22px;  
+	min-width:22px; 
+	}	
+.jBtnSave{  
+	margin:0px auto;
+	position:relative;
+	background-image:url(../../images/icons/32x32/disk.png);
+	background-repeat:no-repeat;
+	background-position:3px 3px;  
+	display: table-cell; 
+	vertical-align: middle;
+	height:30px; 
+	width:120px;  
+	padding:2px 2px 2px 33px;  
+}
+.jPageNum{
+	border:1px solid rgb(240,240,240);
+	background-color:rgb(235,235,235);
+	font-weight:bold;
+	font-size:12px;
+	height:20px;
+	width:20px;	
+}
+.jPageDisabled{
+	border:1px solid rgb(235,235,235);
+	font-weight:bold;
+	font-size:12px;
+	height:20px;
+	width:20px;	
+}
+#msgcontent {
+	display:block; 
+	color:white;
+	background:rgb(224,18,29); 
+	border:2px solid rgb(224,18,29); 
+	border-left:none; 
+	padding:5px; 
+	min-width:150px; 
+	max-width:250px
+	}
+input[type=text]{
+	border:1px solid rgb(230,230,230);
+	height:18px;
+}
+input[type=password]{
+	border:1px solid rgb(230,230,230);
+	height:18px;
+} 
+textarea{
+	border:1px solid rgb(230,230,230);
+}
+select{
+	border:1px solid rgb(230,230,230);
+}
+.m{
+	font-weight:bold;
+	color:red;
+}
+.jLoading{
+	background-image:url(../../images/icons/loader.gif);
+	background-repeat:no-repeat;
+	background-position:left center;   
+	min-height:48px;  
+	min-width:48px;
+	padding:5px 5px 5px 5px; 
+}
